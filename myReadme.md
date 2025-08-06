@@ -24,3 +24,10 @@ we''ll be installing ts globally so we can use it anywhere
 if u give in js syntax it will not run 
 so run in terminal tsc filesname.ext
 so then a file will be created in js with the same code
+
+
+
+#tsc 
+
+you dont have int or float in js
+tyoe script is automsyicslly smsrt it can infer that u are trying to put a number in it
