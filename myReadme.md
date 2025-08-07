@@ -36,3 +36,5 @@ when ts doesnt know what kind of value is going to come up in future it puts it 
 
 any basically turns off the type checking
 noImpilcitAny - use this xcompiler flag to flag any implicit use of 'any'
+
+in case of functions we really need to specify the type
