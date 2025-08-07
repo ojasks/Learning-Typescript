@@ -9,3 +9,11 @@ var userId = 2345678.4;
 userId.toFixed();
 //boolean
 var isLoggedIn = false;
+// any
+//dont use any
+// let hero;
+var hero;
+function getHero() {
+    return "thor";
+}
+hero = getHero();

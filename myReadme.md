@@ -31,3 +31,8 @@ so then a file will be created in js with the same code
 
 you dont have int or float in js
 tyoe script is automsyicslly smsrt it can infer that u are trying to put a number in it
+
+when ts doesnt know what kind of value is going to come up in future it puts it as any.
+
+any basically turns off the type checking
+noImpilcitAny - use this xcompiler flag to flag any implicit use of 'any'
