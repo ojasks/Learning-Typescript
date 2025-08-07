@@ -38,3 +38,7 @@ any basically turns off the type checking
 noImpilcitAny - use this xcompiler flag to flag any implicit use of 'any'
 
 in case of functions we really need to specify the type
+
+never
+some functions never return a value
+if u want to make your errors more robust use never
