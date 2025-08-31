@@ -42,3 +42,4 @@ in case of functions we really need to specify the type
 never
 some functions never return a value
 if u want to make your errors more robust use never
+
