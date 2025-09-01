@@ -81,3 +81,5 @@ btw lite server not that necessary can go with live server
 
 so all summarized tsc -w to listen to ongoing changes 
 and then run with live server
+**************************************************************************************************
+now we come to the tpic of how to create a class in typescript
