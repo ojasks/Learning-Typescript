@@ -43,3 +43,41 @@ never
 some functions never return a value
 if u want to make your errors more robust use never
 
+**************************************************************************************************
+
+How to setup typescript for real projects
+
+* tsc --init ---> creates a simple typescript config file.
+* npm init -y --> a package.json file is created
+* create a index.html file
+create two folders one src and other dist
+using 
+* mkdir src dist
+src is where u write your code
+distribution is something that gets on the production and is served to the end user.
+* create a index.ts file in src
+in dist folder create a index.js file
+
+
+compile this file and produce it inside the index.html
+look for output directory in tsconfig.json
+
+it tells where the output of the file should go
+uncomment it 
+
+when you compile index.ts in src folder you want the index.js file to be
+produced in the dist folder 
+
+tsc -w
+to run in the watch mode
+
+npm i lite-server
+
+change test to start script and put live server
+
+either open with live server or lite server
+btw lite server not that necessary can go with live server
+
+
+so all summarized tsc -w to listen to ongoing changes 
+and then run with live server
