@@ -36,7 +36,13 @@ class User {
         this._courseCount = courseNum;
     }
 }
-// a set accessor can not have a return type annotation
+class SubUser extends User {
+    // this does not have access to private properties of User
+    isFamily = true;
+    changeCourseCount() {
+        this._courseCount = 4; //cant change it as it is private and would require to be changed to protected in USer
+    }
+}
 const ojasss = new User("ojas@google.com", "ojasss");
 // ojasss.city = "bangalore"
 // if u want the city to be not changed make it readonly
@@ -48,4 +54,5 @@ const ojasss = new User("ojas@google.com", "ojasss");
 // u can just put a hash before it -> this is classic js
 // # is a js word , private is a ts word
 // ojasss.deleteToken() // not allowed as it is a private property
+// a set accessor can not have a return type annotation
 //# sourceMappingURL=index.js.map

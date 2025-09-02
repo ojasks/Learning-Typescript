@@ -17,7 +17,7 @@
 // most of the professional people who write code dont do it the above way
 class User {
 
-    private _courseCount = 1;
+    protected _courseCount = 1;
 
     readonly city : string = "bangalore"
     constructor(
@@ -42,7 +42,18 @@ class User {
     }
 }
 
-// a set accessor can not have a return type annotation
+
+class SubUser extends User {
+    // this does not have access to private properties of User
+    isFamily: boolean = true
+    changeCourseCount() {
+        this._courseCount = 4 //cant change it as it is private and would require to be changed to protected in USer
+    }
+}
+
+
+
+
 
 const ojasss = new User("ojas@google.com","ojasss")
 // ojasss.city = "bangalore"
@@ -61,5 +72,5 @@ const ojasss = new User("ojas@google.com","ojasss")
 
 // ojasss.deleteToken() // not allowed as it is a private property
 
-
+// a set accessor can not have a return type annotation
 
