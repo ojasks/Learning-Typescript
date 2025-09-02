@@ -16,7 +16,10 @@
 
 // most of the professional people who write code dont do it the above way
 class User {
-    private readonly city : string = "bangalore"
+
+    private _courseCount = 1;
+
+    readonly city : string = "bangalore"
     constructor(
         public email : string,
          public name: string,
@@ -24,8 +27,22 @@ class User {
         ){
     
     }
+    private deleteToken() {
+        console.log("Token deleted")
+    }
+    get getAppleEmail(): string{
+        return `apple${this.email}`
+    }
+
+    set courseCount(courseNum: number){
+        if (courseNum <=1) {
+            throw new Error("Course Count should be more than 1")
+        }
+        this._courseCount = courseNum
+    }
 }
 
+// a set accessor can not have a return type annotation
 
 const ojasss = new User("ojas@google.com","ojasss")
 // ojasss.city = "bangalore"
@@ -41,6 +58,8 @@ const ojasss = new User("ojas@google.com","ojasss")
 // u can just put a hash before it -> this is classic js
 
 // # is a js word , private is a ts word
+
+// ojasss.deleteToken() // not allowed as it is a private property
 
 
 

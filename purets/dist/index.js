@@ -17,12 +17,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class User {
     email;
     name;
+    _courseCount = 1;
     city = "bangalore";
     constructor(email, name) {
         this.email = email;
         this.name = name;
     }
+    deleteToken() {
+        console.log("Token deleted");
+    }
+    get getAppleEmail() {
+        return `apple${this.email}`;
+    }
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course Count should be more than 1");
+        }
+        this._courseCount = courseNum;
+    }
 }
+// a set accessor can not have a return type annotation
 const ojasss = new User("ojas@google.com", "ojasss");
 // ojasss.city = "bangalore"
 // if u want the city to be not changed make it readonly
@@ -33,4 +47,5 @@ const ojasss = new User("ojas@google.com", "ojasss");
 //if u wanna make it inaccessible without using the private keyword
 // u can just put a hash before it -> this is classic js
 // # is a js word , private is a ts word
+// ojasss.deleteToken() // not allowed as it is a private property
 //# sourceMappingURL=index.js.map
