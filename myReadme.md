@@ -92,3 +92,11 @@ in web dev we call them interface
 these protocols they dont have definitions
 
 whats the use of abstract classes in interfaces? -----> interview question
+**************************************************************************************************
+generics is one such thing that makees the component reusable
+
+all your functions are generics behind the scene
+
+in an identity function you should'nt use "any" datatype
+as it can take a string data type and return a num datatype
+this is not something we want
