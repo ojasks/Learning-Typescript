@@ -87,3 +87,6 @@ now we come to the tpic of how to create a class in typescript
 
 // a set accessor can not have a return type annotation
 
+in the world of swift there are a lot of protocols
+in web dev we call them interface
+these protocols they dont have definitions
