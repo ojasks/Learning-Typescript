@@ -90,3 +90,5 @@ now we come to the tpic of how to create a class in typescript
 in the world of swift there are a lot of protocols
 in web dev we call them interface
 these protocols they dont have definitions
+
+whats the use of abstract classes in interfaces? -----> interview question
