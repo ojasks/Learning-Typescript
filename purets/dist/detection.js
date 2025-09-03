@@ -27,4 +27,13 @@ function printString(strs) {
         }
     }
 }
+// understand the importance of "in" keyword it confirms the interface
+function isAdminAccount(account) {
+    if ("isAdmin" in account) {
+        return account.isAdmin;
+    }
+}
+//this function is to find if the account is of admin
+// return account.isAdmin wont work as we are not sure that the account is 100%  of admin
+//the "in" operator helps u to narrow down which operator it is 
 //# sourceMappingURL=detection.js.map
