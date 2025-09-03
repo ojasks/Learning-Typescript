@@ -39,5 +39,17 @@ const getMoreSearchProducts = (products) => {
     const myIndex = 3;
     return products[myIndex];
 };
-// <T,> this comma is put so that to denote that this sis not a jsx syntax but the generic tag
+function anotherFunction(valueOne, valueTwo) {
+    return {
+        valueOne,
+        valueTwo
+    };
+}
+class Sellable {
+    cart = []; //gonna take an array of the "T" type and initialize it with an empty array
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
+//the moment u see  "<>" or u see "T" its a sign that its a generic type (class or function)
 //# sourceMappingURL=myGenerics.js.map

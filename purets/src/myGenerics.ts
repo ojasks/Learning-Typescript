@@ -59,3 +59,45 @@ const getMoreSearchProducts = <T,>(products : T[]): T | undefined=> {
 // <T,> this comma is put so that to denote that this sis not a jsx syntax but the generic tag
 
 
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+
+function anotherFunction<T,U extends Database>(valueOne: T,valueTwo: U):object {
+    return {
+        valueOne,
+        valueTwo
+    }
+}
+
+// anotherFunction(3,4);
+// anotherFunction(3,{})
+
+// U extends number means that it can be an y type of number but not a string or any other data type
+// now where does this extends matter
+
+
+interface Quiz {
+    name : string,
+    type: string
+}
+
+interface Course {
+    name : string,
+    author: string,
+    subject : string
+}
+
+class Sellable<T>{
+    public cart : T[] = [] //gonna take an array of the "T" type and initialize it with an empty array
+
+    addToCart(product : T) {
+        this.cart.push(product)
+    }
+
+}
+
+//the moment u see  "<>" or u see "T" its a sign that its a generic type (class or function)
