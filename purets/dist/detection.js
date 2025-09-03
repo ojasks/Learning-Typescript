@@ -62,4 +62,36 @@ function getFood(pet) {
         return "bird food";
     }
 }
+function getTrueShape(shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
+    //else i am sure its a square
+    // return shape.side * shape.side; // on adding reactnagle to the shapes it becomes unsure as it can be square as well as rectangle
+}
+/// coming to the never type and exhaustive check
+function getArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            return shape.side * shape.side;
+        case "rectangle":
+            return shape.length * shape.width;
+        default:
+            const _defaultforshape = shape;
+            return _defaultforshape;
+        // so now this is yelling that wea are missing something that is a check case
+        //which was otherwise mi ssing 
+    }
+}
+// lets say we have many more cases here then its the called "exhaustive checking" here
+// okay what if now reactangle ws also introduced int the shapes 
+//in the same way in payment gateways another step was introduced as authorization as well
+// so how would u have added it
+//then what happens 
+//the "getTrueShape" function starts falling apart
+//and also should'nt there be another case that we should be checking
+//for this we should hhave a default case of the type "never" onto whatever shape(here) u are defining on
+//and that should be returned 
 //# sourceMappingURL=detection.js.map
