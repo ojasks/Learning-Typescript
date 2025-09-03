@@ -101,3 +101,9 @@ class Sellable<T>{
 }
 
 //the moment u see  "<>" or u see "T" its a sign that its a generic type (class or function)
+
+
+
+//the behaviour of javascript is such that in onsole when you enter an array and ask its typeof
+// it gives u object including when u give it null, if u give empty string it still gives u string  
+
